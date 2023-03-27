@@ -3,6 +3,7 @@
 // document.write("Hello World");
 import { makeGrid, addFinalStates, valueIteration, completedOrNotForNow, isTerminalState, isObstacle, addObstacles, getNeighbours, calculateNewValue, nextCell, DIRECTIONS, getDirection } from "./required-functions.js";
 // window.simulationStatus = simulationStatus;
+
 window.initialize = initialize;
 window.change_interval = change_interval;
 
@@ -99,8 +100,7 @@ function convergedForNow(grid) {
 	// }
 }
 
-
-function clickedOnNextValue(e) {
+function realclickedOnNextValue(e, msgvalue=-234) {
 	var cell = nextCellToCalculate;
 	console.log(cell);
 	if(nextCellToCalculate[0] === 0 && nextCellToCalculate[1] === 0 && subIterations === 0) {
@@ -113,7 +113,16 @@ function clickedOnNextValue(e) {
 	const neighbourValues = calculateNewValue(nextCellToCalculate[0], nextCellToCalculate[1], reward, gamma, grid, 0);
 	const value = createEquation(neighbourValues);
 	// console.log(value);
-
+	if(msgvalue != -234) {
+		console.log("msgvalue: " + msgvalue + " value: " + value + " diff: " + Math.abs(value - msgvalue));
+		if (Math.abs(value - msgvalue) > 0.0001) {
+			var reqstring = document.getElementById("value-calculation-paragraph").innerHTML;
+			document.getElementById("value-calculation-paragraph").innerHTML =  "<span style='color: red;'> Incorrect !! Check the following equation. </span>" + " <br /> " + reqstring;
+		} else {
+			var reqstring = document.getElementById("value-calculation-paragraph").innerHTML;
+			document.getElementById("value-calculation-paragraph").innerHTML = "<span style='color: green;'>Correct !!</span>" + " <br /> " +  reqstring;
+		}
+	}
 	// console.log(grid);
 	newGrid[nextCellToCalculate[0]][nextCellToCalculate[1]] = value;
 	nextCellToCalculate = nextCell(nextCellToCalculate[0], nextCellToCalculate[1], grid);
@@ -132,6 +141,8 @@ function clickedOnNextValue(e) {
 
 		nextCellToCalculate = [0, 0];
 	}
+	// call myModal and don't run code until it is closed
+
 	constructTable(grid);
 	var reqCell = document.getElementById("cell2" + cell[0] + cell[1]);
 	var oldColor = reqCell.style.backgroundColor;
@@ -148,7 +159,28 @@ function clickedOnNextValue(e) {
 		oldColor = reqCell.style.backgroundColor;
 		reqCell.animate({ backgroundColor: "lightgrey" }, 1500);
 	}
+}
 
+function clickedOnNextValue(e) {
+	  // Call the showModal function to display the modal and wait for user input
+	  var testmodal = document.getElementById("myModal");
+	  var randomValue = Math.random();
+	  var reqstring = document.getElementById("test-modal-p");
+	  reqstring.innerHTML = "Enter Value for " + "V" + "(" + nextCellToCalculate[0] + "," + nextCellToCalculate[1] + ")";
+	  if(testmodal != null && randomValue < 0.9)
+	  {
+		
+		testmodal.style.display = "block";
+
+		showModal().then(function(inputValue) {
+			// This code will only run when the Promise is resolved with the input value
+			console.log("User input: " + inputValue);
+			realclickedOnNextValue(e, inputValue);
+		});
+	  }
+	  else {
+		realclickedOnNextValue(e);
+	  }
 }
 
 function clickedOnNextIteration(e) {
@@ -601,6 +633,7 @@ toggleButton.click();
 // });
 
 var toggleButton2 = document.getElementById('toggle2');
+
 // When the user clicks anywhere outside of the toggleButton, close it
 // window.addEventListener("click", function(event) {
 // 	// console.log(toggleButton.checked);
@@ -608,3 +641,92 @@ var toggleButton2 = document.getElementById('toggle2');
 // 		// toggleButton2.checked^=1;	
 // 	}
 // });
+
+
+
+
+// // When the user clicks on the button, open the testmodal
+// submitBtn.onclick = function() {
+//   testmodal.style.display = "block";
+// }
+
+// // When the user clicks on <span> (x), close the testmodal
+// var span = document.getElementsByClassName("test-modal-close")[0];
+// span.onclick = function() {
+//   if (input.value.trim() === "") {
+//     alert("Please enter your input.");
+//   } else {
+//     testmodal.style.display = "none";
+//   }
+// }
+
+// // When the user clicks anywhere outside of the testmodal, close it
+// window.onclick = function(event) {
+//   if (event.target == testmodal) {
+//     if (input.value.trim() === "") {
+//       alert("Please enter your input.");
+//     } else {
+//       testmodal.style.display = "none";
+//     }
+//   }
+// }
+
+
+
+function showModal() {
+	// Get the modal
+	var testmodal = document.getElementById("myModal");
+
+	// Get the input field and submit button
+	var input = document.getElementById("userInput");
+	var submitBtn = document.getElementById("submitBtn");
+  
+	// Reset the input field value
+	input.value = "";
+  
+	// Create a Promise object
+	var promise = new Promise(function(resolve, reject) {
+	  // When the user clicks on the button, open the modal
+	//   submitBtn.onclick = function() {
+	// 	modal.style.display = "block";
+	//   }
+  
+	  // When the user submits the form, resolve the Promise with the input value
+
+	//   var span = document.getElementsByClassName("submitBtn")[0];
+	//   span.onclick = function() {
+	// 	if (input.value.trim() === "") {
+	// 	  alert("Please enter your input.");
+	// 	} else {
+	// 	  testmodal.style.display = "none";
+	// 	}
+	//   }
+
+	  var form = document.getElementsByClassName("submitBtn")[0];
+	  form.onclick = function(event) {
+		event.preventDefault(); // prevent form submission
+		if (input.value.trim() === "") {
+		  alert("Please enter your input.");
+		} else {
+		  testmodal.style.display = "none";
+		  resolve(input.value.trim());
+		}
+	  }
+  
+	  // When the user clicks anywhere outside of the modal, do nothing
+	  window.onclick = function(event) {
+		if (event.target == testmodal) {
+		  // Do nothing
+		}
+	  }
+	});
+  
+	// Return the Promise object
+	return promise;
+  }
+  
+//   // Call the showModal function to display the modal and wait for user input
+//   showModal().then(function(inputValue) {
+// 	// This code will only run when the Promise is resolved with the input value
+// 	console.log("User input: " + inputValue);
+//   });
