@@ -164,10 +164,10 @@ function realclickedOnNextValue(e, msgvalue=-234) {
 function clickedOnNextValue(e) {
 	  // Call the showModal function to display the modal and wait for user input
 	  var testmodal = document.getElementById("myModal");
-	  
+	  var randomValue = Math.random();
 	  if(testmodal != null && randomValue < 0.9)
 	  {
-		var randomValue = Math.random();
+		
 		var reqstring = document.getElementById("test-modal-p");
 		reqstring.innerHTML = "Enter Value for " + "V" + "(" + nextCellToCalculate[0] + "," + nextCellToCalculate[1] + ")";
 			
