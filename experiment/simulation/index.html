@@ -60,6 +60,7 @@
 			<p class="value-calculation-paragraph" id="value-calculation-paragraph">Calculation of value function of a state appears here</p>
 			
 		</div>
+		
 		<div class="grid-title">
 			<h2 class="present-iteration-display" id="present-iteration-display">Policy Representation</h2>
 			<h2 class="next-iteration-display" id="next-iteration-display">Calculation of State values</h2>
@@ -113,7 +114,7 @@
 			<div class="button-container" id="button-container">
 
 				<button class="button" id="next-value">next value</button>
-				<button class="button" id="next-iteration">next Iteration</button>
+				<button class="button" id="next-iteration">Calculation of State values</button>
 
 			</div>
 		</div>
@@ -167,15 +168,12 @@
 		</div>
 		
 		<div class="play-pause">
-			
 			  <input type="button" value="Reset" class="button-input" id="reset">
 			  <input type="button" value="Start" class="button-input" id="start">
-			  <input type="button" value="Pause" class="button-input" id="pause">
-
-			
+			  <input type="button" value="Pause" class="button-input" id="pause">			
 		</div>
 		<input type="checkbox" id="toggle">
-		<label for="toggle" id="cloud-box">Open Overlay</label>
+		<label for="toggle" id="cloud-box" style="display: none;">Open Overlay</label>
 		
 		<dialog id="cloud-dialog">
 		  <p>
@@ -186,7 +184,7 @@
 		</dialog>
 
 		<input type="checkbox" id="toggle2">
-		<label for="toggle2" id="cloud-box2">Open Overlay</label>
+		<label for="toggle2" id="cloud-box2" style="display: none;">Open Overlay</label>
 		
 		<dialog id="cloud-dialog2">
 		  <p>
