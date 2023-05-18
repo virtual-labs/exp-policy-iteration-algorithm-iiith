@@ -1,39 +1,90 @@
 {
   "version": 2.0,
   "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      {
+          "question": "What does MDP stand for?",
+          "answers": {
+              "a": "Markov Decision Process",
+              "b": "Machine Deterministic Process",
+              "c": "Magnitude Difference Policy",
+              "d": "Markov Dynamic Position"
+          },
+          "explanations": {
+              "a": "MDP stands for Markov Decision Process. The name of MDPs comes from the Russian mathematician Andrey Markov as they are an extension of Markov chains.",
+              "b": "MDP are named after a Russian mathematician. It is a way to describe a system that is not deterministic but has a finite number of states and actions.",
+              "c": "MDP are named after a Russian mathematician. It is a way to describe a system that is not deterministic but has a finite number of states and actions.",
+              "d": "MDP are named after a Russian mathematician. It is a way to describe a system that is not deterministic but has a finite number of states and actions."
+          },
+          "correctAnswer": "a",
+          "difficulty": "beginner"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+          "question": "What is the goal of policy iteration?",
+          "answers": {
+              "a": "To find the optimal policy in a Markov Decision Process",
+              "b": "To estimate the value function for each state",
+              "c": "To determine the transition probabilities in a Markov Decision Process",
+              "d": "To calculate the expected rewards in a Markov Decision Process"
+          },
+          "explanations": {
+              "a": "The goal of policy iteration is to find the optimal policy in a Markov Decision Process, which maximizes the expected cumulative rewards.",
+              "b": "Estimating the value function for each state is a step within policy iteration, but the ultimate goal is to find the optimal policy.",
+              "c": "Determining the transition probabilities is a characteristic of Markov Decision Processes, but policy iteration aims to find the optimal policy.",
+              "d": "Calculating expected rewards is an aspect of Markov Decision Processes, but policy iteration focuses on finding the optimal policy."
+          },
+          "correctAnswer": "a",
+          "difficulty": "beginner"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      {
+          "question": "What are the two main steps of policy iteration?",
+          "answers": {
+              "a": "Policy evaluation and policy improvement",
+              "b": "State estimation and reward maximization",
+              "c": "Action selection and state transition",
+              "d": "Exploration and exploitation"
+          },
+          "explanations": {
+              "a": "Policy iteration involves two main steps: policy evaluation, where the value function for a given policy is determined, and policy improvement, where the policy is modified to select better actions in each state.",
+              "b": "State estimation and reward maximization are components of reinforcement learning, but they are not the main steps of policy iteration.",
+              "c": "Action selection and state transition are parts of the decision-making process in Markov Decision Processes, but they are not the main steps of policy iteration.",
+              "d": "Exploration and exploitation are strategies used in reinforcement learning, but they are not the main steps of policy iteration."
+          },
+          "correctAnswer": "a",
+          "difficulty": "intermediate"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+          "question": "What is the purpose of policy evaluation in policy iteration?",
+          "answers": {
+              "a": "To determine the value function for a given policy",
+              "b": "To update the transition probabilities in a Markov Decision Process",
+              "c": "To find the optimal policy",
+              "d": "To select the best action in a given state"
+          },
+          "explanations": {
+              "a": "Policy evaluation aims to determine the value function for a given policy, which represents the expected cumulative rewards starting from a particular state and following the policy thereafter.",
+              "b": "Updating transition probabilities is a characteristic of Markov Decision Processes but is not the purpose of policy evaluation.",
+              "c": "Finding the optimal policy is the ultimate goal of policy iteration, but policy evaluation is a step towards achieving it.",
+              "d": "Selecting the best action in a given state is a part of the decision-making process but is not the purpose of policy evaluation."
+          },
+          "correctAnswer": "a",
+          "difficulty": "intermediate"
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
+      {
+          "question": "What is policy improvement in policy iteration?",
+          "answers": {
+              "a": "Modifying the policy to select better actions in each state",
+              "b": "Updating the value function for each state",
+              "c": "Adjusting the transition probabilities in a Markov Decision Process",
+              "d": "Evaluating the expected rewards for each action"
+          },
+          "explanations": {
+              "a": "Policy improvement involves modifying the policy to select better actions in each state, typically by selecting actions with higher expected rewards.",
+              "b": "Updating the value function for each state is a part of policy evaluation, not policy improvement.",
+              "c": "Adjusting transition probabilities is a characteristic of Markov Decision Processes but is not the purpose of policy improvement.",
+              "d": "Evaluating expected rewards for each action is a step in reinforcement learning, but it is not the main focus of policy improvement."
+          },
+          "correctAnswer": "a",
+          "difficulty": "intermediate"
+      }
   ]
 }

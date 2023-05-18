@@ -194,6 +194,7 @@ table th, table td {
 .observe {
   display: flex;
   justify-content: space-between;
+  font-size: large;
   
 }
 /* .observe:nth-child(1) {
@@ -212,7 +213,7 @@ table th, table td {
 .button-container {
 	display: flex;
 	justify-content: space-around;
-	width: 100%;
+	width: 80%;
 }
 
 .button {
@@ -234,12 +235,16 @@ table th, table td {
 }
 
 .play-pause, .button-container {
-  margin: 3rem;
+  margin: 15rem;
   margin-top: 1rem;
   align-items: center;
   justify-content: center;
-  gap: 5%;
+  gap: 0.4%;
   display: flex;
+}
+/* move buttons slightly to the right */
+.play-pause {
+  margin-left: -0.5rem;
 }
 .button-container {
   margin: 0;
@@ -257,21 +262,31 @@ table th, table td {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
+	/* font-size: 16px; */
+  font-size: large;
+  font-weight: 500;
 	/* margin: 4px 2px; */
 	cursor: pointer;
 	background-color: white;
 	border-radius: 2vw;
 	border-style: solid;
 	/* border-width: 1px; */
-	border-color: rgb(62, 142, 208);
-	background-color: rgb(62, 142, 208);
+	border-color: rgb(190, 187, 187);
+	background-color: rgb(190, 187, 187);
 	/* position: absolute; */
 	/* left: 45%;
 	top: 70%;
 	height: 6vh;
 	width: 11vw; */
   transition: background-color 0.2s ease-in-out;
+}
+#start {
+  background-color: rgb(62, 142, 208);
+  border-color: rgb(62, 142, 208);
+}
+#start:hover {
+  background-color: rgb(190, 187, 187);
+  border-color: rgb(190, 187, 187);
 }
 .button-control {
   background-color: grey;
