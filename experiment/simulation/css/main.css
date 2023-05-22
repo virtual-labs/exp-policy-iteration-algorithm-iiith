@@ -280,6 +280,14 @@ table th, table td {
 	width: 11vw; */
   transition: background-color 0.2s ease-in-out;
 }
+
+.resetButton {
+  background-color: rgb(62, 142, 208);
+  border-color: rgb(62, 142, 208);
+  font-size: large;
+  /* background-color: lightgrey; */
+}
+
 #start {
   background-color: rgb(62, 142, 208);
   border-color: rgb(62, 142, 208);
@@ -289,8 +297,9 @@ table th, table td {
   border-color: rgb(190, 187, 187);
 }
 .button-control {
-  background-color: grey;
-  border-color: lightblue;
+  background-color:rgb(190, 187, 187);
+  border-color: rgb(190, 187, 187);
+  font-size: large;
 	/* background-color: lightgrey; */
 }
 .modal { 
@@ -503,7 +512,24 @@ table th, table td {
 
   transform: translate(-50%, -50%);
 }
-
+.inputSlider {
+  width: 100%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: left;
+  font-size: medium;
+  min-width: fit-content;
+  /* min-width: 65%; */
+}
+/* Align items :horizontally flex */
+#ranger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4%;
+  display: flex;
+}
 
 @media screen and (max-width: 600px) {
   .modal-dialog {
