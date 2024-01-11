@@ -27,18 +27,26 @@ Policy Iteration involves two primary components:
 
 ### Step-by-Step Explanation
 
-1. **Initialization:** Start with an arbitrary policy π₀ (typically random).
+1. **Initialization:** 
+   Assign an initial value function V(s) and policy π(s) for all states s in S.
 
 2. **Policy Evaluation:**
-   - For each state s in S, calculate the value function V(s) under π₀.
-   - V(s) is found by solving the Bellman equation:
-     \[ V(s) = \sum_{s'} P(s'|s,π(s)) [R(s,π(s),s') + γV(s')] \]
-   - γ is the discount factor, determining the importance of future rewards.
+   - Initialize Δ to 0.
+   - Iterate over each state s in S:
+     - Temporarily store the current value V(s).
+     - Update V(s) using the expected return from policy π, considering all possible next states s':
+       \[ V(s) \leftarrow \sum_{s'} P(s'|s,π(s)) \left[ R(s,π(s),s') + γV(s') \right] \]
+     - Update Δ to the maximum difference between the new and old value of V(s).
+   - Repeat until Δ is less than θ (a small positive number indicating convergence).
 
 3. **Policy Improvement:**
-   - Update the policy π₁ by choosing the action a in each state s that maximizes the expected utility:
-     \[ π'(s) = \argmax_a \sum_{s'} P(s'|s,a) [R(s,a,s') + γV(s')] \]
-   - If π'(s) = π(s) for all s, then π is the optimal policy. Otherwise, set π₀ = π' and return to Policy Evaluation.
+   - Assume the policy is stable to begin with (policy-stable ← true).
+   - For each state s in S:
+     - Determine the best action a according to the current value function V(s):
+       \[ a \leftarrow π(s) \]
+       \[ π(s) \leftarrow \argmax_a \sum_{s'} P(s'|s,a) \left[ R(s,a,s') + γV(s') \right] \]
+     - If this action is different from the current policy, the policy is not stable (policy-stable ← false).
+   - If the policy is stable, stop and return V and π. Otherwise, return to Policy Evaluation.
 
 ### Convergence and Optimality
 
