@@ -1,4 +1,4 @@
-# Experiment Aim: Policy Iteration Algorithm in Gridworld
+# Policy Iteration Algorithm in Gridworld
 
 This experiment is designed to demonstrate the policy iteration algorithm applied in a Gridworld setting. It offers an interactive platform where users can observe and analyze the evolution of policies at each iteration within the Markov Decision Process (MDP).
 
