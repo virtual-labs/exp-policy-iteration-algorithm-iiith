@@ -28,25 +28,25 @@ Policy Iteration involves two primary components:
 ### Step-by-Step Explanation
 
 1. **Initialization:** 
-   Assign an initial value function V(s) and policy π(s) for all states s in S.
+   Set an initial value function V(s) and policy π(s) for all states s in S.
 
 2. **Policy Evaluation:**
-   - Initialize Δ to 0.
-   - Iterate over each state s in S:
-     - Temporarily store the current value V(s).
-     - Update V(s) using the expected return from policy π, considering all possible next states s':
-       \[ V(s) \leftarrow \sum_{s'} P(s'|s,π(s)) \left[ R(s,π(s),s') + γV(s') \right] \]
-     - Update Δ to the maximum difference between the new and old value of V(s).
-   - Repeat until Δ is less than θ (a small positive number indicating convergence).
+   - Set Δ to zero.
+   - For each state s in S:
+     - Save the current value V(s).
+     - Update V(s) by summing over all possible next states s':
+       `V(s) = Σ P(s'|s,π(s)) [ R(s,π(s),s') + γV(s') ]`
+     - Update Δ to the maximum difference between the new and old V(s).
+   - Continue this process until Δ is smaller than a small positive number θ, indicating convergence.
 
 3. **Policy Improvement:**
-   - Assume the policy is stable to begin with (policy-stable ← true).
+   - Start with the assumption that the policy is stable (policy-stable = true).
    - For each state s in S:
-     - Determine the best action a according to the current value function V(s):
-       \[ a \leftarrow π(s) \]
-       \[ π(s) \leftarrow \argmax_a \sum_{s'} P(s'|s,a) \left[ R(s,a,s') + γV(s') \right] \]
-     - If this action is different from the current policy, the policy is not stable (policy-stable ← false).
-   - If the policy is stable, stop and return V and π. Otherwise, return to Policy Evaluation.
+     - Find the best action a given the current value function V(s):
+       `a = π(s)`
+       `π(s) = argmax_a Σ P(s'|s,a) [ R(s,a,s') + γV(s') ]`
+     - If the updated policy π(s) differs from the previous one, the policy is not yet stable (policy-stable = false).
+   - If the policy is stable, end the process and return V and π; otherwise, go back to Policy Evaluation.
 
 ### Convergence and Optimality
 
