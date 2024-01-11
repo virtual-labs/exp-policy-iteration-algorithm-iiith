@@ -64,5 +64,5 @@ Understanding the theory and mathematics behind Policy Iteration is crucial in a
 
 
 
-7. Code-Snippet:
+## Code-Snippet:
 ![Policy Iteration](./images/policy-iteration.png)
