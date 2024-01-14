@@ -1,4 +1,4 @@
-# Theory of Policy Iteration
+# Policy Iteration
 
 ## Introduction to Policy Iteration
 

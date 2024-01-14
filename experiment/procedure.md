@@ -1,17 +1,29 @@
-## Step 1:
-In practice section double click/ single click to modify the cells as terminal states or blocked states
-## Step 2:
-Modify the parameters and the grid size by changing values in the control menu
+### **Step 1: Modifying the Grid**
+- **Double Click/Single Click** on any cell in the grid to change its state. 
+  - **Terminal States:** These are your target or end points (like a charging station). 
+  - **Blocked States:** These are obstacles or no-go areas.
 
-## Step 3:
-The grid represents the state value function for each state : Left, Up, Right and Downx
-## Step 4: 
-Click on next value to go to the next step in the current iteration, the sub-iterations will increase. Once reached a terminal state or max steps allowed per iteration, the iteration count will be increased and steps will be 0.
-## Step 5:
-Click on the next iteration to go to the next iteration.
+### **Step 2: Adjusting Settings**
+- Use the **Control Menu** to change grid size and algorithm parameters.
+  - Adjust things like grid dimensions or algorithm settings to see how they affect the outcome.
 
-## Step 6:
-The arrows in the left grid represent the currently learned policy.
+### **Step 3: Understanding the Grid**
+- The grid shows the **State Value Function** for each cell.
+  - Each cell's value represents the expected reward for moving in the directions: Left, Up, Right, Down.
 
-## Step 7:
-Once the state value functions of every state values converge (optimal policy selected) a message would be displayed
+### **Step 4: Iteration and Sub-Iterations**
+- Click **"Next Value"** to progress through the current iteration step-by-step.
+  - The **Sub-Iterations** count increases with each step.
+  - When a terminal state or the maximum steps per iteration are reached, the iteration count increases and the steps reset to 0.
+
+### **Step 5: Moving to the Next Iteration**
+- Click **"Next Iteration"** to proceed to the next cycle of the algorithm.
+  - This allows you to see how the algorithm refines its strategy over time.
+
+### **Step 6: Learning the Policy**
+- The **Arrows in the Left Grid** indicate the currently learned policy.
+  - These arrows guide you towards the most rewarding actions in each state.
+
+### **Step 7: Reaching the Optimal Policy**
+- When the State Value Functions of all cells stabilize, an **Optimal Policy** is achieved.
+  - A message will be displayed indicating that the best strategy has been found.
