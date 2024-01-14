@@ -1,0 +1,47 @@
+
+/home/runner/work/exp-policy-iteration-algorithm-iiith/exp-policy-iteration-algorithm-iiith/experiment/simulation/js/main.js
+  122:8   warning  'reqstring' is already defined                      no-redeclare
+  159:3   warning  'oldColor' is assigned a value but never used       no-unused-vars
+  165:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  166:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  167:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  168:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  169:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  181:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  182:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  184:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  187:33  warning  'e' is defined but never used                       no-unused-vars
+  396:11  warning  'i' is already defined                              no-redeclare
+  397:7   warning  'row' is already defined                            no-redeclare
+  398:12  warning  'j' is already defined                              no-redeclare
+  399:8   warning  'cell' is already defined                           no-redeclare
+  450:15  warning  'reward' is already defined                         no-redeclare
+  450:23  warning  'discountFactor' is defined but never used          no-unused-vars
+  620:2   warning  Unnecessary semicolon                               no-extra-semi
+  636:5   warning  'toggleButton2' is assigned a value but never used  no-unused-vars
+  683:6   warning  'submitBtn' is assigned a value but never used      no-unused-vars
+  689:46  warning  'reject' is defined but never used                  no-unused-vars
+  690:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  695:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  706:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  707:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  710:2   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  712:2   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  713:2   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  715:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  717:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  718:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  720:2   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+  722:1   warning  Mixed spaces and tabs                               no-mixed-spaces-and-tabs
+
+/home/runner/work/exp-policy-iteration-algorithm-iiith/exp-policy-iteration-algorithm-iiith/experiment/simulation/js/required-functions.js
+   21:5   warning  'rewardUP' is assigned a value but never used     no-unused-vars
+   23:5   warning  'rewardLeft' is assigned a value but never used   no-unused-vars
+   25:5   warning  'rewardRight' is assigned a value but never used  no-unused-vars
+   27:5   warning  'rewardDown' is assigned a value but never used   no-unused-vars
+   58:12  warning  'i' is already defined                            no-redeclare
+  255:9   warning  'max' is assigned a value but never used          no-unused-vars
+
+✖ 39 problems (0 errors, 39 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+

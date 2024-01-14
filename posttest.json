@@ -1,0 +1,160 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the purpose of policy iteration in reinforcement learning?",
+      "answers": {
+        "a": "To find the optimal policy for a given Markov Decision Process (MDP)",
+        "b": "To calculate the value function for a given policy",
+        "c": "To estimate the state-action values in a Q-learning algorithm",
+        "d": "To update the exploration-exploitation trade-off in a multi-armed bandit problem"
+      },
+      "explanations": {
+        "a": "",
+        "b": "Policy iteration aims to find the best policy for a given MDP by iteratively improving the policy until convergence.",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In policy iteration, what does policy evaluation involve?",
+      "answers": {
+        "a": "Updating the policy based on current value estimates",
+        "b": "Iteratively calculating the state-action values using the Bellman equation",
+        "c": "Estimating the value function for a fixed policy",
+        "d": "Determining the best action to take in each state"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "Policy evaluation involves estimating the value function for a fixed policy by iteratively applying the Bellman equation.",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the convergence condition for policy iteration?",
+      "answers": {
+        "a": "When the value function reaches a steady state",
+        "b": "When the policy remains unchanged after policy improvement",
+        "c": "When the algorithm reaches a fixed number of iterations",
+        "d": "When the agent reaches the optimal policy"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "The convergence condition for policy iteration is when the policy remains unchanged after policy improvement, indicating that the optimal policy has been reached."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question":
+
+ "What is the advantage of policy iteration over value iteration?",
+      "answers": {
+        "a": "Policy iteration converges faster than value iteration",
+        "b": "Policy iteration guarantees convergence to the optimal policy",
+        "c": "Policy iteration is less computationally expensive",
+        "d": "Value iteration provides a better exploration-exploitation trade-off"
+      },
+      "explanations": {
+        "a": "",
+        "b": "Policy iteration guarantees convergence to the optimal policy, whereas value iteration may not converge to the optimal policy in all cases.",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the main drawback of policy iteration?",
+      "answers": {
+        "a": "It can be computationally expensive",
+        "b": "It does not guarantee convergence",
+        "c": "It requires a fixed number of iterations",
+        "d": "It only works for small state spaces"
+      },
+      "explanations": {
+        "a": "Policy iteration can be computationally expensive, especially for large state spaces, as it involves iterative policy evaluation and improvement steps.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "In policy iteration, what is the role of policy improvement?",
+      "answers": {
+        "a": "To update the value estimates for each state",
+        "b": "To update the policy based on current value estimates",
+        "c": "To select the best action in each state",
+        "d": "To calculate the Q-values for each state-action pair"
+      },
+      "explanations": {
+        "a": "",
+        "b": "Policy improvement involves updating the policy based on the current value estimates, typically by selecting the action with the highest value for each state.",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How does policy iteration differ from value iteration?",
+      "answers": {
+        "a": "Policy iteration updates the policy, while value iteration updates the value function",
+        "b": "Policy iteration converges faster than value iteration",
+        "c": "Policy iteration is a model-based algorithm, while value iteration is model-free",
+        "d": "Policy iteration requires a fixed number of iterations, while value iteration does not"
+      },
+      "explanations": {
+        "a": "Policy iteration involves updating the policy based on the value function, while value iteration focuses on updating the value function directly.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the main idea behind policy iteration?",
+      "answers": {
+        "a": "To iteratively improve a policy until it becomes optimal",
+        "b": "To estimate the value function for a fixed policy",
+        "c": "To find the best action to take in each state",
+        "d": "To update the exploration-exploitation trade-off in a multi-armed bandit problem"
+      },
+      "explanations": {
+        "a": "The main idea behind policy iteration is to iteratively improve a policy until it becomes the optimal policy, by alternating between policy evaluation and policy improvement steps.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the typical stopping condition for policy iteration?",
+      "answers": {
+        "a": "When the value function reaches a steady state",
+        "b": "When the policy remains unchanged after policy improvement",
+        "c": "When the algorithm reaches a fixed number of iterations",
+        "d": "When the agent reaches the optimal policy"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "The typical stopping condition for policy iteration is when the policy remains unchanged after policy improvement, indicating that the optimal policy has been reached."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    }
+  ]
+}
